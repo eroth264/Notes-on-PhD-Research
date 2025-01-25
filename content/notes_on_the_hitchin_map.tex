@@ -1,0 +1,132 @@
+\section{Notes on the Hitchin Map}
+We describe roughly what Hitchin did in his paper \cite{hitch}, observing the cotangent bundle $T^*\N\rightarrow\N$ of the moduli space $\N$ of stable holomorphic vector bundles over a Riemann surface $X$ (of rank $r$ and degree $d$), and proved that it is an \textit{algebraically completely integrable system} (ACIS).
+
+
+\subsection{General Setup}
+
+We fix a compact Riemann surface $X$ of genus $g>1$, and fix a smooth vector bundle $\E$ on $X$ of complex rank $r$ and degree $d$. A holomorphic vector bundle $E$ of rank $r$ and degree $d$ is determined by a \textit{holomorphic structure} $d_A$ on $\E$, which is an operator:
+\begin{equation}
+    d_A:\Omega^0(X,\E)\rightarrow\Omega^{0,1}(X,\E),
+\end{equation}
+with the Leibniz rule:
+\begin{equation}
+    d_A(fs)=\overline{\partial}f\otimes s+fd_A(s),
+\end{equation}
+where $\Omega^0(X,\E)$ is the sheaf of smooth sections of $\E$, and $\Omega^{0,1}(X,\E)=\Omega^{0,1}(X)\otimes \Omega^0(X,\E)$.
+
+By subtracting two holomorphic structures, we get $C^\infty(X)$-linearity:
+\begin{equation}
+    (d_A-d_{A'})(fs)=f(d_A-d_{A'})(s),
+\end{equation}
+ensuring $d_A-d_{A'}\in\Omega^{0,1}(X,\End(\E))$ (the maps induced on the fibers of $\mathbb{E}$ are linear). Thus, the holomorphic structures form an infinite dimensional complex affine space $\A$ based on $\Omega^{0,1}(X,\End(\E))$.
+
+Let $\G=\Aut(\mathbb{E})$ be the Lie group of smooth vector bundle automorphisms on $\mathbb{E}$, acting on $\A$ through conjugation:
+\begin{equation}
+    g\in\G:\quad d_A\mapsto g^{-1}d_A g,
+\end{equation}
+which are affine transformations on $\A$. Through $\G$ acting on $\A$, we can obtain a quotient $\N=\A^{\text{st}}/\G$ of slope-stable holomorphic vector bundles on $X$, and write $E=[d_A]$ in $\N$ (this is known as the de Rham moduli space).
+
+Through symplectic reduction, it can be shown that $\N$ is a complex submanifold of a compact complex manifold, there is also an algebraic construction through projective GIT, using Quot schemes, that is equivalent due to Kempf-Ness. Through a Riemann-Roch calculation, we have that:
+\begin{equation}
+\dim_{\C}{\N}=r^2(g-1)+1,\qquad(=m).
+\end{equation}
+In both situations, we can talk about the cotangent bundle $T^*\N\rightarrow\N$.
+
+Hitchin claims in \cite{hitch} that with the canonical symplectic structure $\omega$, there exists $m$ smooth functions $a_1,\ldots,a_m:T^*\N\rightarrow\C$, such that
+\begin{enumerate}[label=(\alph*)]
+    \item The induced Hamiltonian fields $X_{a_i}$ are linearly independent everywhere (equivalently $da_1\wedge\ldots\wedge da_m$ is generically nonzero).
+    \item We have $\{a_i,a_j\}=0$ (they Poisson-commute).
+\end{enumerate}
+In this case, $T^*\N$ is called a \textit{completely integrable Hamiltonian system}. Hitchin claims further that it is \textit{algebraically} completely integrable, so we also have
+\begin{enumerate}[label=(\alph*),resume]
+    \item A generic fiber of $h=(a_1,\ldots,a_m):T^*\N\rightarrow\C^m$ embeds as an open subset of an abelian variety.
+\end{enumerate}
+
+These extra conditions give the functions ``compatibility'' with the algebraic structure of $\N$, and are fulfilled precisely by the Hitchin map $h$ constructed in \cite{hitch}.
+
+\subsection{The Hitchin Map}
+
+How can an element in $T^*\N$ be actually written down? Fixing $E\in\N$, deformation theory tells us that $T_E\N\cong H^1(X,\End(E))$. Then by using Serre duality, we have $T_E\N^*\cong H^0(X,\End(E)\otimes K)$, for the canonical bundle $K$ of $X$. Giving an element $T^*\N$ is the same as giving a pair $(E,\varphi)$, where $\varphi:E\rightarrow E\otimes K$ is called a \textit{Higgs field}.
+
+Hitchin's idea is to define a smooth map
+\begin{equation}
+h:T^*\N\rightarrow\H=\bigoplus_{i=1}^r\Omega^0(X,K^{\otimes i}),
+\end{equation}
+where $(E,\varphi)$ is mapped to its characteristic polynomial $\chi_\varphi(t)=\det(t-\varphi)$. More precisely, on a local trivialization of $E$, $\chi_\varphi(t)$ is the determinant of an $r\times r$-matrix valued in local sections of $K$ varying in $t$. On the determinant bundle $\det(\End(E)\otimes K)$, we get a decomposition
+\begin{equation}
+    \chi_\varphi(t)=t^r+a_1t^{r-1}+\ldots+a_{r-1}t+a_r,
+\end{equation}
+with coefficients $a_i\in\Omega^0(X,K^{\otimes i})$.
+
+By calculating the complex dimension of $\H$ to be $m$ using Riemann-Roch, as in \cite[Section 4]{hitch}, when we fix an isomorphism $\H\cong\C^m$, we have $h=(a_1,\ldots,a_m)$. Hitchin then shows that these smooth functions $a_i:T^*\N\rightarrow\C$ Poisson-commute in \cite[Proposition 4.5]{hitch}, using Hamiltonian reduction from $\A$ to $\A/\G$.
+
+We have that $da_1\wedge\ldots\wedge da_r$ is generically nonzero, since the coefficients $a_i$ all being nonzero is a generic property of $T^*\N$. Thus, we have a completely integrable Hamiltonian system!
+
+\subsection{Spectral Curves (away from Ramification)}
+
+For the total space $|K|$ of $K$, and the canonical morphism $\pi:|K|\rightarrow X$, observe the pullback diagram of vector bundles,
+\begin{equation}\label{diagram}
+    \begin{tikzpicture}[scale=1.3]
+        \node (A) at (0,1) {$\pi^*K$};
+        \node (B) at (1,1) {$K$};
+        \node (C) at (0,0) {$|K|$};
+        \node(D) at (1,0) {$X$};
+        \path[->,font=\scriptsize,>=angle 90]
+        (A) edge node[above]{} (B)
+        (B) edge node[right]{} (D)
+        (A) edge node[left]{} (C)
+        (C) edge node[above]{$\pi$} (D)
+        (C) edge[bend left] node[left]{$\lambda$} (A);
+    \end{tikzpicture},
+\end{equation}
+with the tautological section $\lambda=(\lambda_1,\lambda_2):p\mapsto(p,p)$. We then define the \textit{spectral curve at $\varphi$}
+\begin{equation}
+X_\varphi=\{p\in|K|:\chi_\varphi(\lambda_2(p))=0\},
+\end{equation}
+by which $\chi_\varphi(t)$ can take in values at $K$ and return a value in $\det(\End(E)\otimes K)$. Using linear systems of divisors of $X_\varphi$ for all $(E,\varphi)$, Bertini's theorem states that $X_\varphi$ is smooth for generic $(E,\varphi)$ in $T^*\N$.
+
+When $X_\varphi$ is smooth at $(E,\varphi)$, $\varphi$ is diagonalizable for all $x\in X$, and $\pi_{\varphi}:X_\varphi\rightarrow X$ appears as a cover of degree $r$. Elements of $\pi_{\varphi}^{-1}(x)$ correspond to eigenvalues $p_x\in K$ of $\varphi$  at $x$. The eigenspaces of $E$ at these eigenvalues $p$ are isomorphic to line subbundles $L^E_p\in\Jac(X_\varphi)$ of $\pi_\varphi^*\E$, as the eigenvalues $p$ are distinct when $X_\varphi$ is smooth.
+
+For a characteristic polynomial $\chi\in\H$, the fiber $h^{-1}(\chi)$ consists of the families of pairs $(E,\varphi)$ where $\chi_\varphi=\chi$, and the spectral curve $X_\varphi$ is fixed. What differentiates between elements in $h^{-1}(\chi)$ are the line bundle eigenspaces $L^E_p$ in $X_\varphi$. Precisely, we get an injective morphism of varieties
+\begin{equation}
+h^{-1}(\chi)\rightarrow\Jac(X_\varphi),\qquad (E,\varphi)\mapsto (L^E_p).
+\end{equation}
+
+A possible inverse could be
+\begin{equation}
+    \Jac(X_\varphi)\rightarrow h^{-1}(\chi),\qquad L\mapsto\pi_{\varphi*}(L)\cong\bigsqcup_{x\in X}\bigoplus_{p_x\in\pi^{-1}(x)}L_{p_x}.
+    \end{equation}
+However, not every line bundle on $\Jac(X_\varphi)$ induces a stable vector bundle of degree $d$ (by construction rank $r$ is true), hence $h^{-1}(\chi)$ will be embedded as an open subset of the abelian variety $\Jac(X_\varphi)$, corresponding to the stable locus of vector bundles with Higgs field $\varphi$, and degree $d$. Otherwise, the pushforward $\pi_{\varphi*}(L)$ is how we recover the pair $(E,\varphi)$ from a line bundle of $X_\varphi$.
+
+\subsection{Spectral Curves (at Ramification)}
+
+At ramification the situation is more complicated, $(E,\varphi)$ induces a ramified cover $\pi_\varphi:X_\varphi\rightarrow X$ of degree $r$, with finitely many branch points in $X$.
+
+At a branch point $x\in X$, we have generalized eigenvalues of $E$ at $x$ (appearing more than once on the Jordan normal form), where the ramification index of $\pi_\varphi$ at $x$ is equal to the sum of dimensions of these generalized eigenspaces at $x$.
+
+A pair $(E,\varphi)$ in $h^{-1}(\chi)$ still embeds into $\Jac(X_\varphi)$ as follows, for a branch point $x\in X$ caused by generalized eigenvalues in $\pi^{-1}(x)$, with ramification index $e(p_x)$, we search for $L\in\Jac(X_\varphi)$ (torsion free sheaf of rank 1 as in BNR?) by looking at its \textit{jet} $J_{e(p_x)}(L)_{p_x}$. The jet is the fiber at $p_x\in\pi^{-1}(x)$ of the vector bundle $J_{e(p_x)}(L)$ over $X_\varphi$, where for sections $\sigma:X_\varphi\rightarrow L$ with local coordinates around $p_x\in X_\varphi$ (in a local trivialization of $L$)
+\begin{equation}
+b_0+b_1y+b_2y^2+\ldots+b_{e(p_x)}y^{e(p_x)}+\ldots
+\end{equation}
+the stalk of $J_{e(p_x)}(L)$ at $p_x$ consists of the germs of these sections that agree up to degree $y^{e(p_x)}$. This should be independent of choice of trivialization, and Vakil shows in
+\cite{vakil}, that in general
+\begin{equation}
+    J_n(L)\cong L\otimes (\O(X_\varphi)\oplus K\oplus\ldots\oplus\text{Sym}^n(K)).
+\end{equation}
+The stalk of $J_{e(p_x)}(L)_{p_x}$ should be isomorphic to germs of sections of $E$ at $x$, which evaluate in the generalized eigenspaces of $p_x$ of $E$ at $x$ (that caused ramification). To find $E$ in terms of $L$ in $\Jac(X_\varphi)$, Hitchin in \cite{hitch} looks at the short exact sequence of vector spaces
+\begin{equation}
+    0\rightarrow \bigoplus_{p_x\in\pi^{-1}(x)}L_{p_x}^*\rightarrow(\pi_*L)^*_x\rightarrow\bigoplus_{p_x\in\pi^{-1}(x)}J^*_{e(p_x)}(L)/L_x^*\rightarrow0.
+\end{equation}
+In the unramified case, the first two spaces are equal. When passing to sheaves of $\O(X)$-modules, we obtain
+\begin{equation}\label{equation}
+    0\rightarrow W\rightarrow(\pi_*L)^*\rightarrow\mathcal{S}\rightarrow0,
+\end{equation}
+where $\mathcal{S}$ is a finite sum of skyscraper sheaves (at the branch points), and $W$ is a locally free sheaf of rank $r$ such that $W=E^*$.
+
+Like in \cite[Proposition 2.2]{logmar}, we can also restrict from $X$ to a Zariski-open subset $U\subset X$ containing $x$, such that $L$ is trivial on $\pi|_{\varphi}^{-1}(U)$, and $K$ is trivial over $U$. In this case, $\pi_*L$ restricted to $U$ is given as an $\O(U)$-module by $\O(U)[t]/(\chi(t))$. Here, the zeros of $\chi(t)$ with higher multiplicity introduce torsion elements at their stalks of $\O(U)[t]/(\chi(t))$, corresponding to $\mathcal{S}$ in (\ref{equation}).
+
+\subsection{Conclusion}
+
+For a generic fiber $h^{-1}(\chi)$, we can embed $h^{-1}(\chi)$ as an open subset of Jacobian variety. Thus, the Hitchin map $h$ is an algebraic completely integrable Hamiltonian system.
+
+It would be nice to have that $h^{-1}(\chi)$ is Lagrangian (as a leaf in a Lagrangian foliation of the distribution induced by $X_{a_1},\ldots,X_{a_m}$), as it would agree with Liouville's theorem for completely integrable systems (over $\mathbb{R}$). For this, we need to pass to the moduli space of stable Higgs bundles $\mathcal{M}$, where $T^*\N$ is contained as the complement of a submanifold of at least codimension $g$. Hitchin showed explicitly that these fibers form a Lagrangian foliation vector bundles of rank $2$ in \cite[Section 7]{hitch2}.

@@ -1,0 +1,158 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{hitch}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d0af63589d0e61aaeda653b8860bf668}{%
+           family={Hitchin},
+           familyi={H\bibinitperiod},
+           given={Nigel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{fullhash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{fullhashraw}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{bibnamehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authorbibnamehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authornamehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authorfullhash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authorfullhashraw}{d0af63589d0e61aaeda653b8860bf668}
+      \field{extraname}{1}
+      \field{labelalpha}{Hit}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Stable Bundles and Integrable Systems}
+      \verb{urlraw}
+      \verb https://math.mit.edu/events/talbot/2011/library/hitchin_stable_bundles_integrable_systems.pdf
+      \endverb
+      \verb{url}
+      \verb https://math.mit.edu/events/talbot/2011/library/hitchin_stable_bundles_integrable_systems.pdf
+      \endverb
+      \keyw{manuscript}
+    \endentry
+    \entry{hitch2}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d0af63589d0e61aaeda653b8860bf668}{%
+           family={Hitchin},
+           familyi={H\bibinitperiod},
+           given={Nigel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{fullhash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{fullhashraw}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{bibnamehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authorbibnamehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authornamehash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authorfullhash}{d0af63589d0e61aaeda653b8860bf668}
+      \strng{authorfullhashraw}{d0af63589d0e61aaeda653b8860bf668}
+      \field{extraname}{2}
+      \field{labelalpha}{Hit}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{The Self-Duality Equations on a Riemann Surface}
+      \verb{urlraw}
+      \verb https://londmathsoc.onlinelibrary.wiley.com/doi/epdf/10.1112/plms/s3-55.1.59
+      \endverb
+      \verb{url}
+      \verb https://londmathsoc.onlinelibrary.wiley.com/doi/epdf/10.1112/plms/s3-55.1.59
+      \endverb
+      \keyw{manuscript}
+    \endentry
+    \entry{logmar}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=a857027b6a724cef33fd773fff0ba9b5}{%
+           family={Logares},
+           familyi={L\bibinitperiod},
+           given={Marina},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8456f96ea42dea2605dd33b97d620c57}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \strng{fullhash}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \strng{fullhashraw}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \strng{bibnamehash}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \strng{authorbibnamehash}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \strng{authornamehash}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \strng{authorfullhash}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \strng{authorfullhashraw}{c0c79fe2f0e5ca149cf60b4a2b9bcbb3}
+      \field{labelalpha}{LM}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Moduli of Parabolic Higgs Bundles and Atiyah Algebroids}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/0811.0817
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/0811.0817
+      \endverb
+      \keyw{manuscript}
+    \endentry
+    \entry{vakil}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=fd27b54a95453be8ed6a0951d5bc5075}{%
+           family={Vakil},
+           familyi={V\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{fullhash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{fullhashraw}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{bibnamehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{authorbibnamehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{authornamehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{authorfullhash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{authorfullhashraw}{fd27b54a95453be8ed6a0951d5bc5075}
+      \field{labelalpha}{Vak}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{A Beginner’s Guide to Jet Bundles from the Point of View of Algebraic Geometry}
+      \verb{urlraw}
+      \verb https://math.stanford.edu/~vakil/files/jets.pdf
+      \endverb
+      \verb{url}
+      \verb https://math.stanford.edu/~vakil/files/jets.pdf
+      \endverb
+      \keyw{manuscript}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

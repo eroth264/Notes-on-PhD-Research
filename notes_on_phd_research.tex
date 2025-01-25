@@ -1,0 +1,111 @@
+%packages
+\documentclass[11pt,a4paper,hidelinks,reqno,notitlepage]{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools, amsthm, amssymb, amsfonts}
+\usepackage[inline]{enumitem}
+\usepackage{tikz-cd,tkz-euclide}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{stmaryrd}
+\usepackage[style=alphabetic, citestyle=alphabetic,backend=biber]{biblatex}
+\usepackage{titling}
+
+%add bibliography
+\addbibresource{content/bibliography.bib}
+
+%define citation style
+\DefineBibliographyStrings{english}{%
+    page             = {},
+    pages            = {},
+}
+\DeclareFieldFormat{labelalpha}{\mkbibbold{#1}}
+\DeclareFieldFormat{extraalpha}{\mkbibbold{\mknumalph{#1}}}
+\nocite{*}
+
+%define environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+%macros
+\newcommand{\Comp}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\GL}{\mathbf{GL}}
+\newcommand{\PGL}{\mathbf{PGL}}
+\newcommand{\PSL}{\mathbf{PSL}}
+\newcommand{\U}{\mathbf{U}}
+
+\newcommand{\X}{\mathcal{X}}
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\N}{\mathcal{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\H}{\mathcal{H}}
+
+\newcommand{\g}{\mathfrak{g}}
+
+\newcommand{\Fr}{\text{Fr}}
+\newcommand{\Ad}{\text{Ad}}
+\newcommand{\ad}{\text{ad}}
+\newcommand{\tr}{\text{tr}}
+\renewcommand{\deg}{\text{deg}}
+\renewcommand{\det}{\text{det}}
+\newcommand{\rk}{\text{rk}}
+\newcommand{\pr}{\text{pr}}
+\newcommand{\Bihol}{\text{Bihol}}
+\newcommand{\Mat}{\text{Mat}}
+\newcommand{\Jac}{\text{Jac}}
+\newcommand{\im}{\text{im}}
+\newcommand{\gr}{\text{gr}}
+
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Iso}{\text{Iso}}
+\newcommand{\Symp}{\text{Sp}}
+\newcommand{\Orth}{\text{Orth}}
+\newcommand{\SOrth}{\text{SOrth}}
+\newcommand{\SIso}{\text{SIso}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Span}{\text{span}}
+\newcommand{\orth}{\text{\normalfont orth}}
+
+\newcommand{\Grp}{\textsc{Grp}}
+\newcommand{\Ab}{\textsc{Ab}}
+\newcommand{\Set}{\textsc{Set}}
+\newcommand{\Bun}{\textsc{Bun}}
+
+%title
+\setlength{\droptitle}{-6em}
+\title{\textbf{Notes \\
+      \large Emanuel Roth} \\}
+\author{}
+\date{}
+
+%document
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{content/notes_on_parahoric_groups.tex}
+\input{content/notes_on_the_hitchin_map.tex}
+\input{content/notes_on_higgs_bundles.tex}
+\input{content/notes_on_fano_varieties_K-stability.tex}
+\input{content/notes_on_springer_theory.tex}
+\input{content/notes_on_ADHM.tex}
+
+%bibliography
+%\printbibliography[keyword={book},title={Books},heading=subbibliography]
+\printbibliography[keyword={manuscript},title={Manuscripts and Papers},heading=subbibliography]
+\end{document}
