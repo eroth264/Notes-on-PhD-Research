@@ -21,3 +21,10 @@ ACIS
 Seshadri
 Mehta
 unpunctured
+parahoric
+holonomy
+projectively
+Instantons
+ADHM
+WLOG
+anticanonical

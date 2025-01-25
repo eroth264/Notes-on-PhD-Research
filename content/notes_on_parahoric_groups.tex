@@ -1,71 +1,88 @@
-\section{Notes on Parahoric Groups}
-
+\section{Note on parahoric groups}
+\subsection{Motivation and Narasimhan-Seshadri correspondence}
 We fix a compact Riemann surface $X$ of genus $g>1$.
-The \textit{Narasimhan-Seshadri correspondence} in \cite{ns} found a correspondence between the moduli space of degree $0$, rank $r$, slope-stable holomorphic vector bundles $\mathcal{N}_0$ and irreducible unitary representations of the fundamental group $\pi_1(X)$:
+The \textit{Narasimhan-Seshadri correspondence} from \cite{ns} is a correspondence between the moduli space of degree $0$, rank $r$, slope-stable holomorphic vector bundles $\N_0$, and irreducible unitary representations of the fundamental group $\pi_1(X)$:
 
 \begin{equation}
-\mathcal{N}_0\leftrightarrow\Hom(\pi_1(X),\U(r))/\U(r).
+    \N_0\leftrightarrow\Hom(\pi_1(X),\U(r))/\U(r).
 \end{equation}
 This correspondence is an isomorphism of complex analytic manifolds.
 
-To generalize this to degree $d$ case of $\mathcal{N}_d$, we need universal central extensions of $\pi_1(X)$. The fundamental group $\pi_1(X)$ has $2g$ generators $A_1,\ldots,A_g,B_1,\ldots,B_g$ with the relation:
+We follow \cite[Appendix, Section 4]{dacm} to generalize this to the degree $d$ case of $\N_d$, we need universal central extensions of $\pi_1(X)$. The fundamental group $\pi_1(X)$ has $2g$ generators $A_1,\ldots,A_g,B_1,\ldots,B_g$ with the relation:
 \begin{equation}
-\prod_{i=1}^g[A_i,B_i]=1
+    \prod_{i=1}^g[A_i,B_i]=0.
 \end{equation}
 A universal central extension is a short exact sequence of groups:
-\begin{equation}
-0\rightarrow\Z\rightarrow\Gamma\rightarrow\pi_1(X)\rightarrow1,
+\begin{equation}\label{uce}
+    0\rightarrow\Z\rightarrow\Gamma\rightarrow\pi_1(X)\rightarrow0,
 \end{equation}
-where $\Z$ maps to a central element $J\in\Gamma$. The group $\Gamma$ has the generators with relations:
+where $1\in\Z$ maps to a central element $J\in\Gamma$. The group $\Gamma$ has the generators with relations:
 \begin{equation}
     \prod_{i=1}^g[A_i,B_i]=J.
-    \end{equation}
-
-Using the universal central extension above, any representation $\pi_1(X)\rightarrow\PGL(r,\C)$ lifts to a representation $\Gamma\rightarrow\PGL(r,\C)$. A representation $\pi_1(X)\rightarrow\PGL(r,\C)$ induces a connection with constant central curvature on the  vector bundle $E_\rho$, and we define a subgroup of $\Hom(\Gamma,\GL(r,C))$:
+\end{equation}
+\sloppy
+Using (\ref{uce}), any representation $\tilde{\rho}:\pi_1(X)\rightarrow\PGL(r,\C)$ lifts to a representation $\rho:\Gamma\rightarrow\GL(r,\C)$. From the principal-$\PGL(r,\C)$-bundle $\xi=(\tilde{X}\times_{\tilde{\rho}}\P(\C^r))/\PGL(r,\C)$ on $X$, we find a vector bundle $E_\rho$ on $X$ whose extension from $\GL(r,\C)$ to $\PGL(r,\C)$ is $\xi$. There exists a projectively flat connection $\Theta$ on $E_\rho$ such that at any fiber $x\in X$, $\tilde{\rho}:\pi_1(X,x)\rightarrow\PGL((E_\rho)_x)$ is the holonomy of $\Theta$ at $x$.
+From this, we can define a subgroup of $\Hom(\Gamma,\GL(r,\C))$:
 \begin{equation}
-\Hom_d(\Gamma,\GL(r,\C))=\{\rho\in\Hom(\Gamma,\GL(r,C))|c_1(E_\rho)=d\}.
+    \Hom_d(\Gamma,\GL(r,\C))=\{\rho\in\Hom(\Gamma,\GL(r,\C))|c_1(E_\rho)=d\},
+\end{equation}
+and so we get a more general \textit{Narasimhan-Seshadri correspondence} for degree $d$:
+\begin{equation}
+    \N_d\leftrightarrow\Hom_d(\Gamma,\U(r))/\U(r).
 \end{equation}
 
-We get a more general \textit{Narasimhan-Seshadri correspondence} for degree $d$:
-\begin{equation}
-    \mathcal{N}_d\leftrightarrow\Hom_d(\Gamma,\U(r))/\U(r).
-\end{equation}
-
-What if $X'\subset X$ had finitely many punctures and we looked at bundles over $X'$? Or more algebraically, what if $X'$ was a quasi-projective smooth algebraic curve over $\C$ (not specifically projective)? Would there still be a Narasimhan-Seshadri correspondence over $X'$?
+\textbf{Question:} What if $X'\subset X$ had finitely many punctures, and we looked at bundles over $X'$? Or more algebraically, what if $X'$ was a quasi-projective smooth algebraic curve over $\C$? Would there still be a version of Narasimhan-Seshadri  correspondence over $X'$?
 
 The introduction of punctures allows for vector bundles on $X'$ to exhibit local behavior around them that was previously impossible only on $X$. One could record this extra information as a flag on the puncture points $X\setminus X'$, with weights, leading to the notion of \textit{parabolic vector bundles}. We follow \cite{mehtasesh} in the first section of this note.
 
 One can then ask how this would generalize to principal-$G$-bundles for a reductive group $G$. It would make sense that principal bundles on $X'$ could have a reduction to a parabolic $H$ on the puncture points $X\setminus X'$. How this works will be explained in the second section, following \cite{pr}.
 
-\subsection{Parabolic Vector Bundles}
+\subsection{Parabolic vector bundles}
 
-As a reminder, a compact Riemann surface $X$ of genus $g>1$ has a universal covering of the upper half plane $H$ (see: uniformization theorem), for which a discrete subgroup $\Gamma$ of $\PSL(2,\R)$ acts (freely, properly discontinuously). $X$ can be recovered as $H/\Gamma$, so that $\Gamma=\pi_1(X)$.
+As a reminder, a compact Riemann surface $X$ of genus $g>1$ has a universal covering of the upper half plane $\H$ (see: uniformization theorem), for which a discrete subgroup $\Gamma$ of $\PSL(2,\R)$ acts (freely, properly discontinuously). $X$ can be recovered as $\H/\Gamma$, so that $\Gamma=\pi_1(X)$. \textit{This is not the same $\Gamma$ as in the last section!}
 
-Now instead, we look at $X'=H/\Gamma$ with only finite measure, so $X'$ may have punctures. In \cite{stackex}, parabolic cusps of $\Gamma$ are explained, and we write $H^+=H\cup\textit{Parabolic cusps}$. $X=H^+/\Gamma$ can be viewed as a compact unpunctured Riemann surface containing $X'$.
+Now instead, we look at $X'=\H/\Gamma$ with only finite measure, so $\Gamma$ may not act properly discontinuously and $X'$ may have punctures. In \cite{eom}, parabolic cusps of $\Gamma$ in $\H$ are defined, and we write $\H^+=\H\sqcup\{\textit{Parabolic cusps}\}$. By giving $\H^+$ the appropriate holomorphic structure and by lifting the action of $\Gamma$ from $\H$ to $\H^+$,
+$X=\H^+/\Gamma$ can be viewed as a compact unpunctured Riemann surface containing $X'=\H/\Gamma$. Note that the holomorphic structure of $X$ restricted to $X'$, and that of $X'$ itself, may not be the same.
 
-For a representation $\sigma:\Gamma\rightarrow\U(r,\C)$, we can induce a holomorphic vector bundle $E'_\sigma$ on $X'$ that extends to a holomorphic vector bundle $E_\sigma$ on $X$.
+For an element $P\in X\setminus X'$, which WLOG corresponds to a parabolic cusp $P=\infty\in\H$, one can find a suitable neighborhood of $P$ in $X$ appearing like $U/\Gamma_\infty$, where $U$ is an open neighborhood of $\infty$ in $\H^+$, and $\Gamma_\infty$ is generated as a subgroup of $\Gamma$ by one element ($z\mapsto z+1$) of $\Gamma$.
 
-For a parabolic cusp $P\in X\setminus X'$, which is a parabolic cusp in $H^+$, one can find a suitable neighborhood of $P$ appearing like $U/\Gamma_\infty$, where $\Gamma_\infty$ is generated by one element ($z\mapsto z+1$).
+For a representation $\rho:\Gamma\rightarrow\U(r)$, we can induce a holomorphic vector bundle $E'_\rho=(\H\times_\rho\C^r)/\Gamma$ on $X'$ that extends to a holomorphic vector bundle $E_\rho=(\H^+\times_\rho\C^r)/\Gamma$ on $X$.
+%, through the inclusion $\H\hookrightarrow\H^+$. 
+In \cite[Section 1]{mehtasesh}, by choosing a basis of $E_\rho$ at $P$ (which WLOG corresponds to the cusp at $\infty$), the representation $\rho$ at $P$, acting on the isotropy group $\GL((E_\rho)_p)$, can be represented by a matrix that is invariant under the action of $\Gamma_\infty$, or more explicitly the generator $(z\mapsto z+1)$ of $\Gamma_\infty$. The entries of this matrix can be used to find the \textit{weights} of $E'_\rho$ at $P$.
 
-In \cite{mehtasesh}, by choosing a basis of $E_\sigma$ at $P$, the representation $\sigma$ can be applied to the generator $z\mapsto z+1$ of $\Gamma_\infty$. The subsequent propositions and corollaries calculate that $E_\sigma$, viewed as an extension of $E'_\sigma$ from $X'$ to $X$ with only $\Gamma$-invariant sections of $E'_\sigma$ extended to $E_\sigma$, comes equipped with a \textit{parabolic structure}.
-
-\begin{definition}
-For a compact Riemann surface $X$ with marked points $D_1,\ldots,D_n$ and a vector bundle $E$ on $X$, a \textit{parabolic structure} on $E$ is given by the data on each marked point $D_i$:
-\begin{enumerate}[label=(\alph*)]
-    \item A flag $0=V_0\subset\ldots\subset V_k=E_{D_i}$
-    \item Weights $0\leq\alpha_1<\ldots<\alpha_{k-1}\leq1$
-\end{enumerate}
-The dimensions of the quotients of the flag $V_{l+1}/V_{l}$ are called the multiplicity $k_l$ of $\alpha_l$.
-\end{definition}
-
-One can define morphisms of parabolic vector bundles, which preserve the flag (only when an inequality on the weights are fulfilled). Other constructions include parabolic subbundles, quotients, and more that are similar to that of vector bundles, but respecting the parabolic structure.
-
-Much like for vector bundles, we define a parabolic version of degree. We define such that a parabolic structure $W=E_\sigma$ comes from a unitary bundle if and only if the parabolic degree is $0$.
+The subsequent propositions and corollaries of \cite[Section 1]{mehtasesh} show that $E_\rho$, equipped with the extra information of these weights at punctures in $X\setminus X'$, recovers $E'_\rho$ completely. This is called a \textit{parabolic structure}.
 
 \begin{definition}
-
+    For a compact Riemann surface $X$ with marked points $D_1,\ldots,D_n$ and a vector bundle $E$ on $X$, a \textit{parabolic structure} on $E$ is given by the data on each marked point $D_i$:
+    \begin{enumerate}[label=(\alph*)]
+        \item A flag $0=V_0\subset\ldots\subset V_k=E_{D_i}$.
+        \item Weights $0\leq\alpha_1<\ldots<\alpha_{k-1}\leq1$.
+    \end{enumerate}
+    The dimensions of the quotients of the flag $V_{l+1}/V_{l}$ are called the multiplicity $k_l$ of $\alpha_l$.
 \end{definition}
 
-\subsection{Parahoric Groups}
+One can define morphisms of parabolic vector bundles, which preserve the flag (only when an inequality on the weights are fulfilled). Other constructions include parabolic subbundles, quotients, etc. that are similar to that of vector bundles, but respecting the parabolic structure.
 
-\subsection{Parahoric $\mathcal{G}$-Torsors}
+Much like for vector bundles, we define a parabolic version of degree. We define it such that a parabolic structure on $E$ comes from a holomorphic bundle $E_\rho'$ on $X'\subset X$ if and only if the parabolic degree is $0$.
+
+\begin{definition}
+    Let $E$ be a holomorphic vector bundle on $X$ with a parabolic structure.
+    \begin{enumerate}[label=(\alph*)]
+        \item The \textit{parabolic degree} of $E$ is:
+              \begin{equation}
+                  \pardeg(E)=\deg(E)+\sum_P\sum_ik_i\alpha_i.
+              \end{equation}
+        \item $E$ is parabolic-(semi)-stable if for all subbundles $F$ of $E$, inheriting its parabolic structure, fulfills the inequality:
+        \begin{equation}
+            \frac{\pardeg(F)}{\rk(F)}(\leq)\frac{\pardeg(E)}{\rk(E)}
+        \end{equation}
+    \end{enumerate}
+\end{definition}
+
+For more on parabolic vector bundles, see \cite[Section 2.1]{logmar}. For more on moduli spaces of parabolic vector bundles, see \cite[Section 4]{mehtasesh}, which is constructed analogously to the moduli space of stable vector bundles.
+
+\subsection{Parahoric groups}
+
+
+
+\subsection{Parahoric $\mathcal{G}$-torsors}

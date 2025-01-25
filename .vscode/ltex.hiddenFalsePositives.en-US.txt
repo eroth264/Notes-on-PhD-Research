@@ -3,3 +3,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the group of automorphisms on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q acts on\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be the Lie group of automorphisms on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, acting on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q through conjugation \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, which are affine transformations on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
 {"rule":"CAPITALIZATION_NNP_DERIVED","sentence":"^\\QA generic fiber of \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q embeds as an open subset of an abelian variety.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Qenglish page = , pages = , *\\E$"}

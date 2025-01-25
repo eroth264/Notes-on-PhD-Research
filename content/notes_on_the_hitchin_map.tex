@@ -1,8 +1,8 @@
-\section{Notes on the Hitchin Map}
+\section{Note on the Hitchin map}
 We describe roughly what Hitchin did in his paper \cite{hitch}, observing the cotangent bundle $T^*\N\rightarrow\N$ of the moduli space $\N$ of stable holomorphic vector bundles over a Riemann surface $X$ (of rank $r$ and degree $d$), and proved that it is an \textit{algebraically completely integrable system} (ACIS).
 
 
-\subsection{General Setup}
+\subsection{General setup}
 
 We fix a compact Riemann surface $X$ of genus $g>1$, and fix a smooth vector bundle $\E$ on $X$ of complex rank $r$ and degree $d$. A holomorphic vector bundle $E$ of rank $r$ and degree $d$ is determined by a \textit{holomorphic structure} $d_A$ on $\E$, which is an operator:
 \begin{equation}
@@ -28,7 +28,7 @@ which are affine transformations on $\A$. Through $\G$ acting on $\A$, we can ob
 
 Through symplectic reduction, it can be shown that $\N$ is a complex submanifold of a compact complex manifold, there is also an algebraic construction through projective GIT, using Quot schemes, that is equivalent due to Kempf-Ness. Through a Riemann-Roch calculation, we have that:
 \begin{equation}
-\dim_{\C}{\N}=r^2(g-1)+1,\qquad(=m).
+    \dim_{\C}{\N}=r^2(g-1)+1,\qquad(=m).
 \end{equation}
 In both situations, we can talk about the cotangent bundle $T^*\N\rightarrow\N$.
 
@@ -50,7 +50,7 @@ How can an element in $T^*\N$ be actually written down? Fixing $E\in\N$, deforma
 
 Hitchin's idea is to define a smooth map
 \begin{equation}
-h:T^*\N\rightarrow\H=\bigoplus_{i=1}^r\Omega^0(X,K^{\otimes i}),
+    h:T^*\N\rightarrow\H=\bigoplus_{i=1}^r\Omega^0(X,K^{\otimes i}),
 \end{equation}
 where $(E,\varphi)$ is mapped to its characteristic polynomial $\chi_\varphi(t)=\det(t-\varphi)$. More precisely, on a local trivialization of $E$, $\chi_\varphi(t)$ is the determinant of an $r\times r$-matrix valued in local sections of $K$ varying in $t$. On the determinant bundle $\det(\End(E)\otimes K)$, we get a decomposition
 \begin{equation}
@@ -81,7 +81,7 @@ For the total space $|K|$ of $K$, and the canonical morphism $\pi:|K|\rightarrow
 \end{equation}
 with the tautological section $\lambda=(\lambda_1,\lambda_2):p\mapsto(p,p)$. We then define the \textit{spectral curve at $\varphi$}
 \begin{equation}
-X_\varphi=\{p\in|K|:\chi_\varphi(\lambda_2(p))=0\},
+    X_\varphi=\{p\in|K|:\chi_\varphi(\lambda_2(p))=0\},
 \end{equation}
 by which $\chi_\varphi(t)$ can take in values at $K$ and return a value in $\det(\End(E)\otimes K)$. Using linear systems of divisors of $X_\varphi$ for all $(E,\varphi)$, Bertini's theorem states that $X_\varphi$ is smooth for generic $(E,\varphi)$ in $T^*\N$.
 
@@ -89,13 +89,13 @@ When $X_\varphi$ is smooth at $(E,\varphi)$, $\varphi$ is diagonalizable for all
 
 For a characteristic polynomial $\chi\in\H$, the fiber $h^{-1}(\chi)$ consists of the families of pairs $(E,\varphi)$ where $\chi_\varphi=\chi$, and the spectral curve $X_\varphi$ is fixed. What differentiates between elements in $h^{-1}(\chi)$ are the line bundle eigenspaces $L^E_p$ in $X_\varphi$. Precisely, we get an injective morphism of varieties
 \begin{equation}
-h^{-1}(\chi)\rightarrow\Jac(X_\varphi),\qquad (E,\varphi)\mapsto (L^E_p).
+    h^{-1}(\chi)\rightarrow\Jac(X_\varphi),\qquad (E,\varphi)\mapsto (L^E_p).
 \end{equation}
 
 A possible inverse could be
 \begin{equation}
     \Jac(X_\varphi)\rightarrow h^{-1}(\chi),\qquad L\mapsto\pi_{\varphi*}(L)\cong\bigsqcup_{x\in X}\bigoplus_{p_x\in\pi^{-1}(x)}L_{p_x}.
-    \end{equation}
+\end{equation}
 However, not every line bundle on $\Jac(X_\varphi)$ induces a stable vector bundle of degree $d$ (by construction rank $r$ is true), hence $h^{-1}(\chi)$ will be embedded as an open subset of the abelian variety $\Jac(X_\varphi)$, corresponding to the stable locus of vector bundles with Higgs field $\varphi$, and degree $d$. Otherwise, the pushforward $\pi_{\varphi*}(L)$ is how we recover the pair $(E,\varphi)$ from a line bundle of $X_\varphi$.
 
 \subsection{Spectral Curves (at Ramification)}
@@ -106,7 +106,7 @@ At a branch point $x\in X$, we have generalized eigenvalues of $E$ at $x$ (appea
 
 A pair $(E,\varphi)$ in $h^{-1}(\chi)$ still embeds into $\Jac(X_\varphi)$ as follows, for a branch point $x\in X$ caused by generalized eigenvalues in $\pi^{-1}(x)$, with ramification index $e(p_x)$, we search for $L\in\Jac(X_\varphi)$ (torsion free sheaf of rank 1 as in BNR?) by looking at its \textit{jet} $J_{e(p_x)}(L)_{p_x}$. The jet is the fiber at $p_x\in\pi^{-1}(x)$ of the vector bundle $J_{e(p_x)}(L)$ over $X_\varphi$, where for sections $\sigma:X_\varphi\rightarrow L$ with local coordinates around $p_x\in X_\varphi$ (in a local trivialization of $L$)
 \begin{equation}
-b_0+b_1y+b_2y^2+\ldots+b_{e(p_x)}y^{e(p_x)}+\ldots
+    b_0+b_1y+b_2y^2+\ldots+b_{e(p_x)}y^{e(p_x)}+\ldots
 \end{equation}
 the stalk of $J_{e(p_x)}(L)$ at $p_x$ consists of the germs of these sections that agree up to degree $y^{e(p_x)}$. This should be independent of choice of trivialization, and Vakil shows in
 \cite{vakil}, that in general

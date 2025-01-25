@@ -1,6 +1,6 @@
 %packages
 \documentclass[11pt,a4paper,hidelinks,reqno,notitlepage]{article}
-\usepackage[margin=3cm]{geometry}
+\usepackage[margin=3.3cm]{geometry}
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -16,6 +16,7 @@
 \usepackage{stmaryrd}
 \usepackage[style=alphabetic, citestyle=alphabetic,backend=biber]{biblatex}
 \usepackage{titling}
+\usepackage{sectsty}
 
 %add bibliography
 \addbibresource{content/bibliography.bib}
@@ -29,9 +30,22 @@
 \DeclareFieldFormat{extraalpha}{\mkbibbold{\mknumalph{#1}}}
 \nocite{*}
 
+%define equation style
+\makeatletter \renewcommand{\theequation}{\thesection.\arabic{equation}} \@addtoreset{equation}{section} \makeatother
+
 %define environments
+\newtheorem{theorem}{Theorem}[section]
+\numberwithin{theorem}{section}
+\newtheorem{lemma}[theorem]{Lemma}
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+
+%center section and subsection titles
+\sectionfont{\centering}
+\subsectionfont{\centering}
 
 %macros
 \newcommand{\Comp}{\mathbb{C}}
@@ -40,11 +54,13 @@
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\H}{\mathbb{H}}
 
 \newcommand{\GL}{\mathbf{GL}}
 \newcommand{\PGL}{\mathbf{PGL}}
 \newcommand{\PSL}{\mathbf{PSL}}
 \newcommand{\U}{\mathbf{U}}
+\renewcommand{\P}{\mathbf{P}}
 
 \newcommand{\X}{\mathcal{X}}
 \renewcommand{\S}{\mathcal{S}}
@@ -52,7 +68,6 @@
 \newcommand{\N}{\mathcal{N}}
 \renewcommand{\O}{\mathcal{O}}
 \newcommand{\A}{\mathcal{A}}
-\renewcommand{\H}{\mathcal{H}}
 
 \newcommand{\g}{\mathfrak{g}}
 
@@ -61,6 +76,7 @@
 \newcommand{\ad}{\text{ad}}
 \newcommand{\tr}{\text{tr}}
 \renewcommand{\deg}{\text{deg}}
+\newcommand{\pardeg}{\text{pardeg}}
 \renewcommand{\det}{\text{det}}
 \newcommand{\rk}{\text{rk}}
 \newcommand{\pr}{\text{pr}}
@@ -88,7 +104,7 @@
 
 %title
 \setlength{\droptitle}{-6em}
-\title{\textbf{Notes \\
+\title{\textbf{Notes on PhD Research \\
       \large Emanuel Roth} \\}
 \author{}
 \date{}
@@ -98,6 +114,8 @@
 \maketitle
 \tableofcontents
 
+\pagebreak
+
 \input{content/notes_on_parahoric_groups.tex}
 \input{content/notes_on_the_hitchin_map.tex}
 \input{content/notes_on_higgs_bundles.tex}
@@ -106,6 +124,7 @@
 \input{content/notes_on_ADHM.tex}
 
 %bibliography
-%\printbibliography[keyword={book},title={Books},heading=subbibliography]
+\section{Bibliography}
+\printbibliography[keyword={book},title={Books},heading=subbibliography]
 \printbibliography[keyword={manuscript},title={Manuscripts and Papers},heading=subbibliography]
 \end{document}
